@@ -1,6 +1,6 @@
 ﻿namespace PW3
 {
-    partial class FormPartners
+    partial class FormTypeOfProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@
             buttonTypeDelete = new Button();
             buttonTypeEdit = new Button();
             buttonTypeAdd = new Button();
-            dataGridViewPartners = new DataGridView();
+            dataGridViewType = new DataGridView();
             panelFill = new Panel();
             flowLayoutPanelTop = new Panel();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPartners).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewType).BeginInit();
             panelFill.SuspendLayout();
             flowLayoutPanelTop.SuspendLayout();
             SuspendLayout();
@@ -66,24 +66,24 @@
             buttonTypeAdd.Text = "Добавить";
             buttonTypeAdd.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewPartners
+            // dataGridViewType
             // 
-            dataGridViewPartners.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridViewPartners.BackgroundColor = Color.White;
-            dataGridViewPartners.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPartners.Dock = DockStyle.Fill;
-            dataGridViewPartners.Location = new Point(10, 10);
-            dataGridViewPartners.MultiSelect = false;
-            dataGridViewPartners.Name = "dataGridViewPartners";
-            dataGridViewPartners.ReadOnly = true;
-            dataGridViewPartners.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewPartners.Size = new Size(780, 364);
-            dataGridViewPartners.TabIndex = 0;
+            dataGridViewType.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridViewType.BackgroundColor = Color.White;
+            dataGridViewType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewType.Dock = DockStyle.Fill;
+            dataGridViewType.Location = new Point(10, 10);
+            dataGridViewType.MultiSelect = false;
+            dataGridViewType.Name = "dataGridViewType";
+            dataGridViewType.ReadOnly = true;
+            dataGridViewType.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewType.Size = new Size(780, 364);
+            dataGridViewType.TabIndex = 0;
             // 
             // panelFill
             // 
             panelFill.BackColor = Color.White;
-            panelFill.Controls.Add(dataGridViewPartners);
+            panelFill.Controls.Add(dataGridViewType);
             panelFill.Dock = DockStyle.Fill;
             panelFill.Location = new Point(0, 66);
             panelFill.Name = "panelFill";
@@ -106,16 +106,16 @@
             flowLayoutPanelTop.Size = new Size(800, 66);
             flowLayoutPanelTop.TabIndex = 4;
             // 
-            // FormPartners
+            // FormTypeOfProduct
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(panelFill);
             Controls.Add(flowLayoutPanelTop);
-            Name = "FormPartners";
+            Name = "FormTypeOfProduct";
             Text = "FormPartners";
-            ((System.ComponentModel.ISupportInitialize)dataGridViewPartners).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewType).EndInit();
             panelFill.ResumeLayout(false);
             flowLayoutPanelTop.ResumeLayout(false);
             ResumeLayout(false);
@@ -127,7 +127,7 @@
         private Button buttonTypeDelete;
         private Button buttonTypeEdit;
         private Button buttonTypeAdd;
-        private DataGridView dataGridViewPartners;
+        private DataGridView dataGridViewType;
         private Panel panelFill;
         private Panel flowLayoutPanelTop;
     }
