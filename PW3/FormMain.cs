@@ -13,7 +13,7 @@ namespace PW3
             {
                 var partners = db.Partners.ToList();
                 var products = db.Products.ToList();
-                var typesPartner = db.TypesOfPartners.ToList();
+                var typesPartner = db.TypesOfProduct.ToList();
                 var typesProduct = db.TypesOfProducts.ToList();
                 var partnersProducts = db.PartnersPoducts.ToList();
                 //Console.WriteLine("Список партнеров:");

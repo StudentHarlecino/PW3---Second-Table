@@ -23,8 +23,8 @@ namespace PW3
         {
             base.OnLoad(e);
             this.db = new DbPartnersContext();
-            this.db.TypesOfPartners.Load();
-            this.dataGridViewType.DataSource = this.db.TypesOfPartners.Local.OrderBy(o => o.TypeOfPartner).ToList();
+            this.db.TypesOfProduct.Load();
+            this.dataGridViewType.DataSource = this.db.TypesOfProduct.Local.OrderBy(o => o.TypeOfProduct).ToList();
             dataGridViewType.Columns["Id"].Visible = false;
 
             dataGridViewType.Columns["TypeOfPartner"].HeaderText = "Тип партнера";
@@ -53,14 +53,14 @@ namespace PW3
                 return;
             }
             TypesOfPartner typeOfPartner = new TypesOfPartner();
-            typeOfPartner.TypeOfPartner = formAddType.textBoxTypeName.Text;
+            typeOfPartner.TypeOfProduct = formAddType.textBoxTypeName.Text;
 
-            db.TypesOfPartners.Add(typeOfPartner);
+            db.TypesOfProduct.Add(typeOfPartner);
             db.SaveChanges();
 
             MessageBox.Show("Новый объект добавлен");
 
-            this.dataGridViewType.DataSource = this.db.TypesOfPartners.Local.OrderBy(O => O.TypeOfPartner).ToList();
+            this.dataGridViewType.DataSource = this.db.TypesOfProduct.Local.OrderBy(O => O.TypeOfProduct).ToList();
         }
 
         private void buttonTypeEdit_Click(object sender, EventArgs e)
@@ -77,24 +77,24 @@ namespace PW3
             {
                 return;
             }
-            TypesOfPartner partnerType = db.TypesOfPartners.Find(id);
+            TypesOfPartner partnerType = db.TypesOfProduct.Find(id);
 
             FormAddTypeOfPartners formTypeAdd = new();
 
-            formTypeAdd.textBoxTypeName.Text = partnerType.TypeOfPartner;
+            formTypeAdd.textBoxTypeName.Text = partnerType.TypeOfProduct;
 
             DialogResult result = formTypeAdd.ShowDialog(this);
             if (result == DialogResult.Cancel)
             {
                 return;
             }
-            partnerType.TypeOfPartner = formTypeAdd.textBoxTypeName.Text;
+            partnerType.TypeOfProduct = formTypeAdd.textBoxTypeName.Text;
             db.SaveChanges();
 
             MessageBox.Show("Объект обновлен");
 
-            this.dataGridViewType.DataSource = this.db.TypesOfPartners.Local
-                .OrderBy(O => O.TypeOfPartner).ToList();
+            this.dataGridViewType.DataSource = this.db.TypesOfProduct.Local
+                .OrderBy(O => O.TypeOfProduct).ToList();
 
         }
 
@@ -123,15 +123,15 @@ namespace PW3
             {
                 return;
             }
-            TypesOfPartner partnerType = db.TypesOfPartners.Find(id);
+            TypesOfPartner partnerType = db.TypesOfProduct.Find(id);
 
-            db.TypesOfPartners.Remove(partnerType);
+            db.TypesOfProduct.Remove(partnerType);
             db.SaveChanges();
 
             MessageBox.Show("Объект удален");
 
-            this.dataGridViewType.DataSource = this.db.TypesOfPartners.Local
-                .OrderBy(O => O.TypeOfPartner).ToList();
+            this.dataGridViewType.DataSource = this.db.TypesOfProduct.Local
+                .OrderBy(O => O.TypeOfProduct).ToList();
         }
     }
 }

@@ -21,7 +21,7 @@ public partial class DbPartnersContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
-    public virtual DbSet<TypesOfPartner> TypesOfPartners { get; set; }
+    public virtual DbSet<TypesOfPartner> TypesOfProduct { get; set; }
 
     public virtual DbSet<TypesOfProduct> TypesOfProducts { get; set; }
 
@@ -105,7 +105,7 @@ public partial class DbPartnersContext : DbContext
             entity.ToTable("typesOfPartner");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.TypeOfPartner).HasColumnName("typeOfPartner");
+            entity.Property(e => e.TypeOfProduct).HasColumnName("typeOfPartner");
         });
 
         modelBuilder.Entity<TypesOfProduct>(entity =>

@@ -47,6 +47,7 @@
             buttonTypeDelete.TabIndex = 2;
             buttonTypeDelete.Text = "Удалить";
             buttonTypeDelete.UseVisualStyleBackColor = true;
+            buttonTypeDelete.Click += buttonTypeDelete_Click;
             // 
             // buttonTypeEdit
             // 
@@ -56,6 +57,7 @@
             buttonTypeEdit.TabIndex = 1;
             buttonTypeEdit.Text = "Редактировать";
             buttonTypeEdit.UseVisualStyleBackColor = true;
+            buttonTypeEdit.Click += buttonTypeEdit_Click;
             // 
             // buttonTypeAdd
             // 
@@ -65,6 +67,7 @@
             buttonTypeAdd.TabIndex = 0;
             buttonTypeAdd.Text = "Добавить";
             buttonTypeAdd.UseVisualStyleBackColor = true;
+            buttonTypeAdd.Click += buttonTypeAdd_Click;
             // 
             // dataGridViewType
             // 
